@@ -13,7 +13,7 @@
   ],
   "require": {
     "php": ">=7.0",
-    "marc-mabe/php-enum" : "2.2.*"
+    "marc-mabe/php-enum" : ">=2.2,<5"
   },
   "require-dev": {
     "theseer/phpdox": "0.8.*"
