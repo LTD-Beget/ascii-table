@@ -563,7 +563,7 @@ class AsciiChar extends Enum
     public function isHorizontalSpace() : bool
     {
         return $this->isHorizontalSpace ?? $this->isHorizontalSpace =
-            ($dec = $this->getValue()) === AsciiChar::SPACE || $dec === AsciiChar::HORIZONTAL_TAB;
+            (($dec = $this->getValue()) === AsciiChar::SPACE || $dec === AsciiChar::HORIZONTAL_TAB);
     }
 
     /**
@@ -572,7 +572,8 @@ class AsciiChar extends Enum
     public function isVerticalSpace() : bool
     {
         return $this->isVerticalSpace ?? $this->isVerticalSpace =
-            ($dec = $this->getValue()) === AsciiChar::LINE_FEED || $dec === AsciiChar::VERTICAL_TAB;
+            (($dec = $this->getValue()) === AsciiChar::LINE_FEED || $dec === AsciiChar::CARRIAGE_RETURN ||
+               $dec === AsciiChar::VERTICAL_TAB);
     }
 
     /**
@@ -591,7 +592,7 @@ class AsciiChar extends Enum
     public function isDigit() : bool
     {
         return $this->isDigit ?? $this->isDigit =
-            ($dec = $this->getValue()) >= AsciiChar::ZERO && $dec <= AsciiChar::NINE;
+            (($dec = $this->getValue()) >= AsciiChar::ZERO && $dec <= AsciiChar::NINE);
     }
 
     /**
