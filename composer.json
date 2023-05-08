@@ -2,6 +2,7 @@
   "name": "ltd-beget/ascii-table",
   "type": "library",
   "description": "Php library with ascii table enum.",
+  "license": "MIT",
   "keywords": [
     "ascii"
   ],
